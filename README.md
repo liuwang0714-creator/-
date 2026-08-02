@@ -61,7 +61,7 @@ e:\shangcheng
 │   └── src/main/java/org/example/sotokenspringboot/
 │       ├── SoTokenspringBootApplication.java   # 启动类
 │       ├── config/                # 配置类（CORS、Sa-Token、WebSocket）
-│       ├── controller/            # 控制层（14 个 Controller）
+│       ├── controller/            # 控制层（12 个 Controller）
 │       ├── service/               # 业务层（接口 + 实现类）
 │       ├── mapper/                # 数据访问层（MyBatis）
 │       ├── pojo/                  # 实体类、DTO、统一结果封装
@@ -69,29 +69,18 @@ e:\shangcheng
 │       ├── handier/               # 全局异常处理
 │       └── websocket/             # WebSocket 处理器与会话管理
 │
-├── 前端/on/                        # Web 管理后台（Vue 3 + Vite）
+├── vue/                           # Web 管理后台（Vue 3 + Vite）
 │   └── src/
 │       ├── api/                   # 接口封装
 │       ├── assets/                # 静态资源
-│       ├── components/            # 通用组件（13 个 .vue）
+│       ├── components/            # 通用组件（16 个 .vue）
 │       ├── config/                # 品牌配置（brand.js）
 │       ├── router/                # 路由配置
 │       ├── store/                 # Pinia 状态管理（user、im）
 │       └── views/                 # 页面（9 个 .vue）
 │
 ├── uni-app/                       # 微信小程序端（uni-app）
-│
-├── 申请材料/                      # 软件著作权申请材料
-│   ├── 00-申请总说明与材料清单.md
-│   ├── 01-软件著作权登记申请表.md
-│   ├── 02-软件设计说明书.md
-│   ├── 03-用户使用手册.md
-│   ├── 04-源代码提交说明.md
-│   ├── 05-代码修改说明.md
-│   ├── 瞻途电商交易系统软件说明文档.docx
-│   ├── 系统总体架构图.png
-│   ├── generate_doc.py            # Word 文档生成脚本
-│   └── generate_arch_diagram.py   # 架构图生成脚本
+
 │
 └── 所需环境及其他/                # 环境配置与说明
 ```
@@ -271,7 +260,7 @@ mvn spring-boot:run
 ### 7.3 Web 前端启动
 
 ```bash
-cd 前端/on
+cd vue
 npm install
 npm run dev
 #    访问 http://localhost:5173
@@ -294,7 +283,7 @@ mvn package -DskipTests
 java -jar target/soTokenspringBoot-0.0.1-SNAPSHOT.jar
 
 # 前端打包
-cd 前端/on
+cd vue
 npm run build
 #    产物在 dist 目录，可由 Nginx 托管
 ```
@@ -316,7 +305,7 @@ npm run build
 | 目录 | 说明 |
 | --- | --- |
 | `java/` | 后端 Spring Boot 工程 |
-| `前端/on/` | Web 管理后台（Vue 3 + Vite） |
+| `vue/` | Web 管理后台（Vue 3 + Vite） |
 | `uni-app/` | 微信小程序端（uni-app） |
 | `申请材料/` | 软件著作权登记申请材料 |
 | `所需环境及其他/` | 环境配置与说明文档 |
