@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.sotokenspringboot.mapper.MessageMapper">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO im_message (from_user_id, to_user_id, content, msg_type, send_time)
+        VALUES (#{fromUserId}, #{toUserId}, #{content}, #{msgType}, #{sendTime})
+    </insert>
+
+    <select id="findByUsernames" resultType="org.example.sotokenspringboot.pojo.Message">
+        SELECT m.id, m.from_user_id AS fromUserId, m.to_user_id AS toUserId, m.content, m.msg_type AS msgType, m.send_time AS sendTime,
+               fu.username AS fromUsername, fu.nickname AS fromNickname, ff.file_url AS fromAvatar,
+               tu.username AS toUsername, tu.nickname AS toNickname, tf.file_url AS toAvatar
+        FROM im_message m
+        JOIN user fu ON m.from_user_id = fu.id
+        JOIN user tu ON m.to_user_id = tu.id
+        LEFT JOIN file ff ON fu.user_file_id = ff.id
+        LEFT JOIN file tf ON tu.user_file_id = tf.id
+        WHERE (fu.username = #{username1} AND tu.username = #{username2})
+           OR (fu.username = #{username2} AND tu.username = #{username1})
+        ORDER BY m.send_time DESC
+        LIMIT #{limit}
+    </select>
+
+</mapper>

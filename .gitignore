@@ -1,0 +1,42 @@
+# ========== Java 后端 ==========
+java/target/
+java/.idea/
+java/*.iml
+java/.vscode/
+
+# ========== Web 前端 ==========
+前端/on/node_modules/
+前端/on/dist/
+前端/on/.vite/
+前端/on/*.log
+
+# ========== uni-app 小程序 ==========
+uni-app/unpackage/
+uni-app/node_modules/
+
+# ========== IDE / 编辑器 ==========
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ========== 操作系统 ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========== 日志与临时文件 ==========
+*.log
+logs/
+temp/
+*.tmp
+
+# ========== 环境配置（含敏感信息） ==========
+.env
+.env.local
+*.local
+
+# ========== 构建产物 ==========
+build/
+out/

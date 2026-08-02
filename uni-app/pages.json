@@ -1,0 +1,138 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订单"
+			}
+		},
+		{
+			"path": "pages/goodsdetails/goodsdetails",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/goodsaccount/goodsaccount",
+			"style": {
+				"navigationBarTitleText": "订单结算"
+			}
+		},
+		{
+			"path": "pages/addaddr/addaddr",
+			"style": {
+				"navigationBarTitleText": "新增地址"
+			}
+		},
+		{
+			"path": "pages/music/music",
+			"style": {
+				"navigationBarTitleText": "播放音乐"
+			}
+		},
+		{
+			"path": "pages/ordercount/ordercount",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/wuliu/wuliu",
+			"style": {
+				"navigationBarTitleText": "物流操作"
+			}
+		},
+		{
+			"path": "pages/addr/addr",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
+		},
+		{
+			"path": "pages/updatezil/updatezil",
+			"style": {
+				"navigationBarTitleText": "修改资料"
+			}
+		},
+		{
+			"path": "pages/updatepwd/updatepwd",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+			"path": "pages/im/conversations",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/im/chat",
+			"style": {
+				"navigationBarTitleText": "聊天",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#d4237a",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/images/index.png",
+				"selectedIconPath": "static/images/indexa.png"
+			},
+			{
+				"text": "音乐",
+				"pagePath": "pages/music/music",
+				"iconPath": "/static/images/music.png",
+				"selectedIconPath": "static/images/musica.png"
+			},
+			{
+				"text": "消息",
+				"pagePath": "pages/im/conversations",
+				"iconPath": "/static/images/order.png",
+				"selectedIconPath": "static/images/ordera.png"
+			},
+			{
+				"text": "订单",
+				"pagePath": "pages/order/order",
+				"iconPath": "/static/images/order.png",
+				"selectedIconPath": "static/images/ordera.png"
+			},
+			{
+				"text": "个人中心",
+				"pagePath": "pages/home/home",
+				"iconPath": "/static/images/home.png",
+				"selectedIconPath": "static/images/homea.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "在线商城",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
